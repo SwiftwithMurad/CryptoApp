@@ -82,10 +82,6 @@ class HomeController: CryptoBaseController {
             activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
     }
-    
-    func doSmth() {
-        
-    }
 }
 
 extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
