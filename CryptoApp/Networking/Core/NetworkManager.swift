@@ -22,14 +22,15 @@ enum HTTPMethod: String {
     case delete = "DELETE"
 }
 
-class NetworkManager {
+public final class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
     
-    func getApiRequest<T: Codable>(url: String,
-                                   method: HTTPMethod = .get,
-                                   model: T.Type) async throws -> T {
-        
+    func getApiRequest<T: Codable>(
+        url: String,
+        method: HTTPMethod = .get,
+        model: T.Type
+    ) async throws -> T {
         guard let url = URL(string: url) else {
             throw NetworkError.invalidURL(url)
         }
