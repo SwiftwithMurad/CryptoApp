@@ -70,6 +70,7 @@ class HomeController: CryptoBaseController {
     }
     
     override func configureConstraints() {
+        view.backgroundColor = .green
         view.addSubViews(collection, activityIndicator)
         NSLayoutConstraint.activate([
             collection.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
