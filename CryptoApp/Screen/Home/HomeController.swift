@@ -44,7 +44,6 @@ class HomeController: CryptoBaseController {
     }
     
     override func configureUI() {
-        view.backgroundColor = .white
         collection.refreshControl = refreshControl
         Task {
             await viewModel.fetchCoins()
@@ -70,6 +69,7 @@ class HomeController: CryptoBaseController {
     }
     
     override func configureConstraints() {
+        view.backgroundColor = .white
         view.addSubViews(collection, activityIndicator)
         NSLayoutConstraint.activate([
             collection.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
